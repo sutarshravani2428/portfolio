@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small theme tweaks */
+:root{
+  --bg: #0b0f14;
+  --card: #0e1620;
+  --muted: #9aa6b2;
+  --accent: #2f7df1;
+}
+
+/* optional utilities for semantic classes */
+.text-muted { color: var(--muted); }
+.bg-surface { background-color: var(--card); }

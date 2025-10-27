@@ -1,0 +1,8 @@
+.about h2{margin-top:0;color:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.bio-card{background:var(--card);padding:18px;border-radius:10px}
+.skills-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
+.skill-list{display:flex;flex-direction:column;gap:12px;color:var(--muted)}
+@media (max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+}

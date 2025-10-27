@@ -1,0 +1,16 @@
+<section *ngIf="project" appReveal class="bg-surface p-6 rounded-xl shadow-soft-lg">
+  <h2 class="text-2xl font-semibold">{{project.title}}</h2>
+  <p class="text-muted mt-2">{{project.description}}</p>
+
+  <div class="mt-4">
+    <strong class="text-sm text-muted">Tech:</strong>
+    <div class="mt-2 text-sm">
+      <span *ngFor="let t of project.tech" class="inline-block mr-2 px-2 py-1 rounded-md bg-slate-800 text-muted text-xs">{{t}}</span>
+    </div>
+  </div>
+
+  <div class="mt-6 flex gap-3">
+    <a *ngIf="project.repo" href="{{project.repo}}" target="_blank" class="px-3 py-2 rounded-md bg-brand-500 text-black font-medium">View code</a>
+    <a routerLink="/projects" class="px-3 py-2 rounded-md border border-slate-700 text-sm text-muted">Back</a>
+  </div>
+</section>

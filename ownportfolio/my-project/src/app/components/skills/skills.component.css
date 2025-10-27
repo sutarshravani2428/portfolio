@@ -1,0 +1,4 @@
+.skills h2{margin-top:0}
+.skill-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.group{background:var(--card);padding:12px;border-radius:8px}
+.chips span{display:inline-block;padding:6px 10px;margin:6px 6px 0 0;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-size:13px}

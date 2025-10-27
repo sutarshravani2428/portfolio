@@ -1,0 +1,4 @@
+.contact h2{margin-top:0}
+.contact-card{background:var(--card);padding:16px;border-radius:8px;max-width:720px}
+.muted{color:var(--muted);font-size:14px;margin-top:6px}
+.note{color:var(--muted);margin-top:12px}

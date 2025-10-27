@@ -1,0 +1,28 @@
+<section class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h2 class="text-2xl font-semibold">Projects</h2>
+    <p class="text-muted text-sm">Selected projects — ongoing & published work</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <div *ngFor="let p of projects" appReveal class="bg-surface p-6 rounded-xl shadow-soft-lg transform hover:-translate-y-1 transition">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-lg font-semibold">{{p.title}}</h3>
+          <p class="text-muted text-sm mt-1">{{p.short}}</p>
+        </div>
+      </div>
+
+      <p class="text-slate-200 mt-4 text-sm leading-relaxed">{{p.description}}</p>
+
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        <span *ngFor="let t of p.tech" class="text-xs px-2 py-1 rounded-md bg-slate-800 text-muted">{{t}}</span>
+      </div>
+
+      <div class="mt-4 flex gap-3">
+        <button (click)="openDetail(p)" class="px-3 py-2 rounded-md border border-slate-700 text-sm text-muted hover:text-white">Details</button>
+        <a *ngIf="p.repo" href="{{p.repo}}" target="_blank" class="px-3 py-2 rounded-md bg-brand-500 text-black text-sm font-medium">Code</a>
+      </div>
+    </div>
+  </div>
+</section>
