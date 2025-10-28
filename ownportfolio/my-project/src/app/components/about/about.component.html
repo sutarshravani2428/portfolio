@@ -1,58 +1,121 @@
-<section class="space-y-6">
-  <h2 class="text-2xl font-semibold">About Me</h2>
+<section
+  id="about"
+  class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black to-gray-900 text-white px-6 md:px-20 py-20 animated-bg"
+>
+  <div data-aos="fade-up" class="max-w-4xl text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
+      About Me
+    </h2>
 
-  <div class="grid md:grid-cols-3 gap-6">
-    <div appReveal class="md:col-span-2 bg-surface p-6 rounded-xl shadow-soft-lg">
-      <p class="text-slate-200 leading-relaxed">
-        I am <strong>SHRAVANI SUTAR</strong>, a final-year B.Tech (Data Science) student at Kolhapur Institute Of Technology.
-        I build full-stack web apps and machine learning models with an emphasis on practical, production-ready solutions.
-      </p>
+    <p class="text-lg md:text-xl leading-relaxed mb-8 text-gray-400">
+      I’m a
+      <span class="text-white font-semibold">final-year B.Tech student in Data Science</span>
+      at
+      <span class="text-white font-semibold">Kolhapur Institute of Technology, Maharashtra</span>,
+      maintaining a GPA of <span class="font-semibold text-white">8.1/10</span>.
+      My journey blends
+      <span class="text-gray-300 font-semibold">data, AI, and development</span> —
+      turning information into intelligent solutions.
+    </p>
 
-      <h3 class="mt-6 text-lg font-medium">Education</h3>
-      <div class="mt-2 text-muted">
-        <div><strong>Kolhapur Institute Of Technology</strong> — B.Tech (Data Science), GPA: 8.1/10.0</div>
-        <div class="mt-1 text-sm">Nov 2022 – May 2026</div>
-        <ul class="list-disc pl-5 mt-2 text-muted text-sm">
-          <li>Relevant Coursework: EDA, Machine Learning, Deep Learning, Linear Algebra, Probability & Statistics, DBMS, DSA, NLP</li>
-        </ul>
+    <p
+      data-aos="fade-up"
+      data-aos-delay="100"
+      class="text-lg md:text-xl leading-relaxed mb-8 text-gray-400"
+    >
+      With hands-on experience in
+      <span class="text-white">Machine Learning</span>,
+      <span class="text-white">Python</span>, and
+      <span class="text-white">Data Analytics</span>,
+      I’ve built models for classification, regression, and exploratory data analysis using
+      <span class="text-white">Pandas</span>,
+      <span class="text-white">NumPy</span>, and
+      <span class="text-white">Scikit-learn</span>.
+    </p>
+
+    <p
+      data-aos="fade-up"
+      data-aos-delay="200"
+      class="text-lg md:text-xl leading-relaxed text-gray-400"
+    >
+      Alongside my data focus, I’m passionate about
+      <span class="text-white">web development</span> using
+      <span class="text-white">Django</span> (backend) and
+      <span class="text-white">Angular</span> (frontend),
+      building scalable, modern web apps.
+    </p>
+
+    <!-- Skills Section -->
+    <div
+      data-aos="zoom-in"
+      data-aos-delay="300"
+      class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
+    >
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-brands fa-python text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">Python</p>
       </div>
 
-      <h3 class="mt-6 text-lg font-medium">Work Experience</h3>
-      <div class="mt-2 text-muted">
-        <div><strong>Advantech Softwares — Software Engineering Intern (ongoing)</strong></div>
-        <ul class="list-disc pl-5 mt-2 text-muted text-sm">
-          <li>Built REST APIs with FastAPI & PostgreSQL to collect LMS data.</li>
-          <li>Developed a full-stack app (Angular + Django + PostgreSQL + Docker) to analyze GitHub classroom data.</li>
-          <li>Designed visualizations for GitHub collaboration in classrooms.</li>
-        </ul>
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-solid fa-robot text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">Machine Learning</p>
       </div>
 
-      <h3 class="mt-6 text-lg font-medium">Certifications & Achievements</h3>
-      <ul class="list-disc pl-5 mt-2 text-muted text-sm">
-        <li>Google Cloud — 30 skill badges (Google Cloud Arcade Facilitator Program, 2025)</li>
-        <li>Data Analytics & Visualization — Accenture (Forage), Nov 2024</li>
-        <li>The Complete 2024 Web Development Bootcamp — Udemy, Feb 2024</li>
-      </ul>
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-brands fa-angular text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">Angular</p>
+      </div>
+
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-brands fa-python text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">Django</p>
+      </div>
+
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-solid fa-chart-column text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">Power BI</p>
+      </div>
+
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-solid fa-chart-pie text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">Tableau</p>
+      </div>
+
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-solid fa-bolt text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">FastAPI</p>
+      </div>
+
+      <div
+        class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center"
+      >
+        <i class="fa-solid fa-database text-2xl mb-2 text-gray-200"></i>
+        <p class="text-gray-200 text-sm font-semibold">PostgreSQL</p>
+      </div>
     </div>
 
-    <div appReveal class="bg-surface p-6 rounded-xl shadow-soft-lg">
-      <h4 class="text-lg font-medium">Technical Skills</h4>
-      <div class="mt-3 space-y-3 text-sm text-muted">
-        <div>
-          <strong>Languages & Tools</strong>
-          <div class="mt-1 text-slate-100">Java, Python (Pandas, NumPy, scikit-learn, Matplotlib), SQL, C, Excel, PowerBI, Tableau</div>
-        </div>
-
-        <div>
-          <strong>Frameworks</strong>
-          <div class="mt-1 text-slate-100">Angular, Django, PostgreSQL, FastAPI, Material-UI</div>
-        </div>
-
-        <div>
-          <strong>Data & ML</strong>
-          <div class="mt-1 text-slate-100">Data preprocessing, EDA, Time Series, Regression, Classification</div>
-        </div>
-      </div>
-    </div>
+    <p
+      data-aos="fade-up"
+      data-aos-delay="400"
+      class="mt-12 text-xl text-gray-400 italic"
+    >
+      “To become a <span class="text-white font-semibold">Data Science Engineer</span> who bridges
+      analytics and software — building intelligent, data-driven solutions that
+      make technology smarter and more human-centered.”
+    </p>
   </div>
 </section>

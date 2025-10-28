@@ -1,36 +1,158 @@
-<section class="grid md:grid-cols-3 gap-6 items-center">
-  <div appReveal class="md:col-span-2 bg-surface p-8 rounded-xl shadow-soft-lg">
-    <h1 class="text-4xl font-extrabold leading-tight">Hi, I'm <span class="text-brand-500">SHRAVANI SUTAR</span></h1>
-    <p class="mt-3 text-muted">Data Science · Full Stack · Machine Learning</p>
+<!-- Hero Section -->
+<section
+  class="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden"
+>
+  <!-- Navbar -->
+  <header
+    class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-6 z-20"
+  >
+    <div class="text-2xl font-extrabold tracking-widest">SS</div>
 
-    <p class="mt-6 text-slate-200 leading-relaxed">
-      Final-year B.Tech (Data Science) student building ML systems and full-stack web apps — Angular, Django, Python.
-      I deliver production-ready APIs, dashboards and ML models which convert data into actionable insights.
+    <!-- Menu Icon -->
+    <button (click)="toggleMenu()" class="flex flex-col space-y-1.5 focus:outline-none">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+  </header>
+
+  <!-- Hero Text -->
+  <div class="text-center z-10 px-4" data-aos="fade-up">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+      Code That Defines Precision
+    </h1>
+    <h2
+      class="text-4xl md:text-6xl font-extrabold mb-6"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      Design That Defines Experience!
+    </h2>
+    <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="400">
+      Shravanii Sutar — Software Developer
     </p>
-
-    <div class="mt-6 flex flex-wrap gap-3">
-      <a routerLink="/projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 text-black font-semibold shadow">My Projects</a>
-      <a routerLink="/contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 text-muted hover:text-white">Contact</a>
-      <a href="assets/ShravaniSutar_Resume.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 text-muted hover:text-white" target="_blank">Resume</a>
-    </div>
   </div>
 
-  <aside appReveal class="bg-surface p-6 rounded-xl shadow-soft-lg">
-    <div class="space-y-4">
-      <div>
-        <h4 class="text-sm text-muted">Location</h4>
-        <div class="text-slate-100 font-medium mt-1">Kolhapur, Maharashtra</div>
-      </div>
+  <!-- Animated Dots Background (optional particle.js / custom css) -->
+  <div id="particles" class="absolute inset-0 pointer-events-none"></div>
 
-      <div>
-        <h4 class="text-sm text-muted">Email</h4>
-        <div class="mt-1"><a class="text-slate-100 font-medium" href="mailto:sutarshravani1221@gmail.com">sutarshravani1221@gmail.com</a></div>
-      </div>
+  <!-- Curved Bottom Divider -->
+  <div class="absolute bottom-0 w-full overflow-hidden">
+    <svg viewBox="0 0 1440 120" class="w-full">
+      <path
+        fill="#0a0a0a"
+        d="M0,64 C480,160 960,0 1440,64 L1440,120 L0,120 Z"
+      ></path>
+    </svg>
+  </div>
 
-      <div>
-        <h4 class="text-sm text-muted">Phone</h4>
-        <div class="text-slate-100 font-medium mt-1">9699322428</div>
-      </div>
-    </div>
-  </aside>
+  <!-- Tech Icons (scroll animated) -->
+  <div
+    class="absolute bottom-28 flex flex-wrap gap-10 justify-center w-full text-white z-10"
+    data-aos="zoom-in-up"
+  >
+    <i
+      class="devicon-python-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-tailwindcss-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-bootstrap-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-html5-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-css3-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-javascript-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-angular-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-git-plain text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+    <i
+      class="devicon-github-original text-6xl opacity-70 hover:opacity-100 transition-transform transform hover:scale-125"
+    ></i>
+  </div>
+
+  <!-- Social Media Bar -->
+  <div
+    class="absolute bottom-0 left-0 w-full bg-black flex justify-center items-center space-x-10 py-6 border-t border-gray-800 z-50"
+    data-aos="fade-up"
+    data-aos-delay="300"
+  >
+    <!-- Instagram -->
+    <a
+      href="https://instagram.com/_shravii012"
+      target="_blank"
+      class="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-125"
+    >
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a
+      href="https://github.com/sutarshravani2428"
+      target="_blank"
+      class="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-125"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+      href="https://linkedin.com/in/shravani-sutar-sas2428"
+      target="_blank"
+      class="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-125"
+    >
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <!-- Angular -->
+    <a
+      href="https://angular.io"
+      target="_blank"
+      class="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-125"
+    >
+      <i class="fab fa-angular"></i>
+    </a>
+
+    <!-- Django -->
+    <a
+      href="https://www.djangoproject.com/"
+      target="_blank"
+      class="transition-transform transform hover:scale-125"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+        alt="Django"
+        class="w-8 h-8 opacity-70 hover:opacity-100"
+      />
+    </a>
+
+    <!-- Python -->
+    <a
+      href="https://www.python.org/"
+      target="_blank"
+      class="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-125"
+    >
+      <i class="fab fa-python"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    *ngIf="menuOpen"
+    class="fixed top-0 right-0 w-1/2 h-full bg-gray-900 bg-opacity-95 text-center flex flex-col items-center justify-center space-y-6 z-30 animate-slide-in"
+  >
+    <a href="#" class="text-xl font-semibold hover:text-gray-300">Home</a>
+    <a href="#" class="text-xl font-semibold hover:text-gray-300">Projects</a>
+    <a href="#" class="text-xl font-semibold hover:text-gray-300">Skills</a>
+    <a href="#" class="text-xl font-semibold hover:text-gray-300">Contact</a>
+  </div>
 </section>

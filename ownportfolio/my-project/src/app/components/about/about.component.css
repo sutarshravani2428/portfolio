@@ -1,8 +1,44 @@
-.about h2{margin-top:0;color:#fff}
-.about-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
-.bio-card{background:var(--card);padding:18px;border-radius:10px}
-.skills-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
-.skill-list{display:flex;flex-direction:column;gap:12px;color:var(--muted)}
-@media (max-width:900px){
-  .about-grid{grid-template-columns:1fr}
+section {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.animated-bg {
+  animation: gradientMove 10s ease infinite alternate;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+
+h2 {
+  position: relative;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: #ffffff;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Icons hover effect */
+i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+i:hover {
+  transform: scale(1.2);
+  color: #e5e5e5;
 }

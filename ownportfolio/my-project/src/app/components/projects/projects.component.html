@@ -1,27 +1,80 @@
-<section class="space-y-6">
-  <div class="flex items-center justify-between">
-    <h2 class="text-2xl font-semibold">Projects</h2>
-    <p class="text-muted text-sm">Selected projects — ongoing & published work</p>
-  </div>
+<section id="projects" class="py-16 bg-black text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Portfolio Intro -->
+    <div class="text-center mb-14 fade-in-up">
+      <h2 class="text-4xl font-bold mb-4">
+        My <span class="text-gray-400">Projects</span>
+      </h2>
+      <p class="text-gray-500 max-w-2xl mx-auto">
+        A showcase of my academic and personal projects — where creativity,
+        logic, and technology combine to create powerful digital experiences.
+      </p>
+    </div>
 
-  <div class="grid md:grid-cols-2 gap-6">
-    <div *ngFor="let p of projects" appReveal class="bg-surface p-6 rounded-xl shadow-soft-lg transform hover:-translate-y-1 transition">
-      <div class="flex items-start justify-between">
-        <div>
-          <h3 class="text-lg font-semibold">{{p.title}}</h3>
-          <p class="text-muted text-sm mt-1">{{p.short}}</p>
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div
+        *ngFor="let project of projects"
+        class="bg-[#111111] p-6 rounded-2xl border border-gray-800 hover:border-white/60 hover:shadow-lg hover:shadow-gray-500/20 transition-all duration-300 transform hover:-translate-y-2 fade-in-up"
+      >
+        <h3 class="text-xl font-semibold text-gray-200">{{ project.title }}</h3>
+        <p class="text-sm text-gray-500 mt-1">{{ project.duration }}</p>
+        <p class="text-sm mt-2 text-gray-300">
+          <span class="font-semibold text-white/80">Tech Stack:</span>
+          {{ project.techStack }}
+        </p>
+
+        <ul class="mt-4 space-y-2 text-gray-400 text-sm">
+          <li *ngFor="let point of project.description">• {{ point }}</li>
+        </ul>
+
+        <div
+          *ngIf="project.ongoing"
+          class="mt-4 inline-block px-3 py-1 bg-white/20 text-xs font-medium rounded-full"
+        >
+          Ongoing
         </div>
       </div>
+    </div>
 
-      <p class="text-slate-200 mt-4 text-sm leading-relaxed">{{p.description}}</p>
-
-      <div class="mt-4 flex flex-wrap items-center gap-2">
-        <span *ngFor="let t of p.tech" class="text-xs px-2 py-1 rounded-md bg-slate-800 text-muted">{{t}}</span>
+    <!-- Social & Tech Footer -->
+    <div
+      class="mt-16 border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left fade-in-up"
+    >
+      <!-- Social Links -->
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <a
+          href="https://instagram.com/_shravii012"
+          target="_blank"
+          class="text-gray-400 hover:text-white transition"
+        >
+          <i class="fa-brands fa-instagram text-xl"></i>
+        </a>
+        <a
+          href="https://github.com/sutarshravani2428"
+          target="_blank"
+          class="text-gray-400 hover:text-white transition"
+        >
+          <i class="fa-brands fa-github text-xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/shravani-sutar-sas2428"
+          target="_blank"
+          class="text-gray-400 hover:text-white transition"
+        >
+          <i class="fa-brands fa-linkedin text-xl"></i>
+        </a>
       </div>
 
-      <div class="mt-4 flex gap-3">
-        <button (click)="openDetail(p)" class="px-3 py-2 rounded-md border border-slate-700 text-sm text-muted hover:text-white">Details</button>
-        <a *ngIf="p.repo" href="{{p.repo}}" target="_blank" class="px-3 py-2 rounded-md bg-brand-500 text-black text-sm font-medium">Code</a>
+      <!-- Tech Stack Icons -->
+      <div class="flex space-x-6 text-gray-400">
+        <i class="fa-brands fa-angular text-2xl hover:text-white"></i>
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+          class="w-6 h-6 hover:opacity-100 opacity-80 transition"
+          alt="Django"
+        />
+        <i class="fa-brands fa-python text-2xl hover:text-white"></i>
       </div>
     </div>
   </div>

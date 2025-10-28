@@ -1,15 +1,76 @@
+@import "aos/dist/aos.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* small theme tweaks */
+/* Root colors */
 :root{
-  --bg: #0b0f14;
-  --card: #0e1620;
-  --muted: #9aa6b2;
-  --accent: #2f7df1;
+  --bg: #0f0f0f;
+  --bg-alt: #0b0b0b;
+  --brand: #7c3aed;
+  --text: #e6e6e6;
+  --sub: #9ca3af;
+  --border: rgba(255,255,255,0.06);
 }
 
-/* optional utilities for semantic classes */
-.text-muted { color: var(--muted); }
-.bg-surface { background-color: var(--card); }
+html, body { height: 100%; font-family: Inter, sans-serif; background: var(--bg); color: var(--text); scroll-behavior: smooth; }
+
+/* Decoration gradient behind hero */
+.bg-gradient {
+  position: absolute;
+  inset: -20% -10%;
+  background: linear-gradient(120deg, #7c3aed, #6d28d9, #5b21b6);
+  background-size: 200% 200%;
+  filter: blur(120px);
+  opacity: 0.18;
+  z-index: 0;
+  animation: gradient 9s ease infinite;
+}
+
+/* Particle wrapper */
+.hero-particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+
+/* Reveal fallback */
+.reveal { opacity: 0; transform: translateY(20px); transition: all .6s ease-out; }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+
+/* small utility */
+.title-giant { font-family: Poppins, sans-serif; font-weight: 800; letter-spacing: -0.02em; color: #000; }
+@media (prefers-color-scheme: dark) {
+  .title-giant { color: #fff; }
+}
+
+/* footer curved strip */
+.curve-strip { height: 120px; background: #070707; border-top-left-radius: 50% 40%; border-top-right-radius: 50% 40%; transform: translateY(60px); }
+/* Global Animations */
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fade 1s ease forwards;
+}
+
+.animate-fade-delay {
+  animation: fade 1.4s ease forwards;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade { animation: fade 1s ease forwards; }
+.animate-fade-delay { animation: fade 1.4s ease forwards; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  scroll-behavior: smooth;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+a:hover i,
+a:hover img {
+  filter: drop-shadow(0 0 6px currentColor);
+}

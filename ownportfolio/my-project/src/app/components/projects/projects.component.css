@@ -1,10 +1,27 @@
-.projects h2{margin-top:0}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-.project-card{background:var(--card);border-radius:10px;padding:14px;box-shadow:0 8px 22px rgba(0,0,0,0.6)}
-.project-card h3{margin:0 0 8px}
-.project-card .short{color:var(--muted);font-size:14px;margin-bottom:8px}
-.project-card .desc{font-size:14px;line-height:1.5;color:#dfeaf6}
-.project-card .tech{margin-top:10px;color:var(--muted);font-size:13px}
-.card-actions{display:flex;gap:10px;align-items:center;margin-top:14px}
-.btn.small{padding:8px 10px;border-radius:6px}
-.link{color:var(--accent)}
+/* Smooth Fade-in-Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Scroll-triggered animation */
+.fade-in-up {
+  transition: all 0.8s ease;
+}
+
+/* Observer-like reveal */
+.fade-in-up.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
